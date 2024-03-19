@@ -16,7 +16,7 @@ get_text_messages - обработка любого текстового соо�
     - model
 """
 
-TOKEN = ""
+TOKEN = "..."
 bot = telebot.TeleBot(TOKEN)
 
 model_wrapper = ModelWrapper()

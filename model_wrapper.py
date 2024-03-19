@@ -1,5 +1,5 @@
-
 import stat_lm
+
 
 class ModelWrapper:
     """
@@ -27,7 +27,7 @@ class ModelWrapper:
 
         if test_inference:
             try:
-                result = self.model.generate_text("test", **self.generate_kwargs)['total_text']
+                result = self.model.generate("test", **self.generate_kwargs)
             except Exception as e:
                 return False, f"Error while test inference model: {e}"
 
@@ -46,7 +46,7 @@ class ModelWrapper:
         if not isinstance(input_text, str):
             return f"Inputs is not text: {type(input_text)}"
 
-        result = self.model.generate_text(input_text, **self.generate_kwargs)['total_text']
+        result = self.model.generate(input_text, **self.generate_kwargs)
         if not isinstance(result, str):
             return False, f"Inference result is not string: {type(result)}"
 
