@@ -9,4 +9,4 @@
 - [Russian Jokes](https://www.kaggle.com/datasets/konstantinalbul/russian-jokes)
 - [Собственный](https://www.kaggle.com/datasets/boogiewoogieqq/vk-anekdots)
 
-Чтобы запустить код предварительно необходимо скачать [модель](https://drive.google.com/file/d/15uao0yIp5wUraUsEvbOe65Y_PqWrA-zj/view?usp=sharing) и добавить файл в папку `models/stat_lm`.
+Чтобы запустить код предварительно необходимо скачать [модель и токенайзер](https://drive.google.com/drive/folders/1nHu3oWL4WTf3iLuokiNIllQzRAaxNEz1?usp=sharing) и добавить файл в папку `models/stat_lm`.
