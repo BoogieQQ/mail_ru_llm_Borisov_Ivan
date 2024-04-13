@@ -3,7 +3,7 @@ import pickle
 import re
 import numpy as np
 
-from typing import List, Iterable, Optional, Dict
+from typing import List, Iterable, Dict
 from collections import defaultdict
 
 
@@ -133,14 +133,14 @@ class StatLM:
         self.n_gramms_stat = defaultdict(int)
         self.nx_gramms_stat = defaultdict(int)
 
-    def get_token_by_ind(ind: int) -> str:
+    def get_token_by_ind(self, ind: int) -> str:
         return self.tokenizer.vocab.get(ind)
 
-    def get_ind_by_token(token: str) -> int:
+    def get_ind_by_token(self, token: str) -> int:
         return self.tokenizer.inverse_vocab.get(token, self.tokenizer.inverse_vocab[self.unk_token])
 
     def train(self, train_texts: List[str]):
-        for sentence in tqdm(train_texts, desc='train lines'):
+        for sentence in train_texts:
             sentence_ind = self.tokenizer.encode(sentence)
             for i in range(len(sentence_ind) - self.context_size):
                 seq = tuple(sentence_ind[i: i + self.context_size - 1])

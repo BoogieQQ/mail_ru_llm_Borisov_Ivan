@@ -3,7 +3,7 @@ from telebot import types
 
 
 from model_wrapper import ModelWrapper
-from stat_lm import StatLM, Tokenizer
+
 
 """
 get_text_messages - обработка любого текстового сообщения, в том числе того, что отправился при нажатии кнопки.
